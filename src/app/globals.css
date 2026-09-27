@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode: Atelier Basalt & Smoked Terracotta */
+    --background: 36 21% 97%; /* #F8F6F3 */
+    --foreground: 220 10% 11%; /* #191B1F */
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 11%;
+    --primary: 13 54% 50%; /* #C45A3C */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 10% 11%;
+    --secondary-foreground: 36 21% 95%;
+    --muted: 38 22% 92%; /* #F0ECE5 */
+    --muted-foreground: 219 8% 43%;
+    --accent: 38 22% 92%;
+    --accent-foreground: 220 10% 11%;
+    --destructive: 1 54% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 156 46% 31%;
+    --warning: 30 68% 46%;
+    --error: 1 54% 47%;
+    --border: 40 21% 87%; /* #E3DFD7 */
+    --input: 40 21% 87%;
+    --ring: 13 54% 50%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    /* Dark Mode: Atelier Basalt & Smoked Terracotta */
+    --background: 216 11% 8%; /* #131518 */
+    --foreground: 45 13% 95%;
+    --card: 218 13% 12%; /* #1B1E23 */
+    --card-foreground: 45 13% 95%;
+    --popover: 218 13% 12%;
+    --popover-foreground: 45 13% 95%;
+    --primary: 13 71% 60%; /* #E27252 */
+    --primary-foreground: 216 11% 8%;
+    --secondary: 45 13% 95%;
+    --secondary-foreground: 216 11% 8%;
+    --muted: 216 13% 16%; /* #242930 */
+    --muted-foreground: 218 9% 62%;
+    --accent: 216 13% 18%;
+    --accent-foreground: 45 13% 95%;
+    --destructive: 1 68% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 156 49% 47%;
+    --warning: 30 73% 58%;
+    --error: 1 68% 61%;
+    --border: 220 15% 20%; /* #2B303A */
+    --input: 220 15% 20%;
+    --ring: 13 71% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-heading tracking-[-0.03em];
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+  .glass {
+    @apply border border-white/10 bg-background/60 backdrop-blur-xl;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
